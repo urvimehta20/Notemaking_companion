@@ -49,7 +49,7 @@ def load_vector_store(_embeddings):
 # Cache the LlamaCpp model which is the locally saved quantized generation model of the RAG 
 @st.cache_resource
 def load_llm_model():
-    model_path = r"D:\BasicRAG\models\gemma-1.1-2b-it.Q2_K.gguf"
+    model_path = r"D:\Notemaking_companion\models\gemma-1.1-2b-it.Q2_K.gguf"
     return LlamaCpp(model_path=model_path, temperature=0.2, max_tokens=5000, verbose=False, n_ctx=2048)
 
 # Creating the QA chain
