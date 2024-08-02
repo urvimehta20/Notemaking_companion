@@ -2,6 +2,7 @@
 stores/retrieval_data
 models
 apikey.env
+.streamlit/secrets.toml
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
