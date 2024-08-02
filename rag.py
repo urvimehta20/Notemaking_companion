@@ -1,6 +1,6 @@
 import os
 import time
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 from langchain.chains import RetrievalQA
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.llms.llamacpp import LlamaCpp
@@ -12,10 +12,10 @@ import base64
 st.set_page_config(page_title="Your Python Companion", page_icon=":heart:")
 
 # Loading the API key from the .env file
-# load_dotenv("apikey.env")
-# os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
+load_dotenv("apikey.env")
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
-HUGGINGFACEHUB_API_TOKEN = st.secrets['HUGGINGFACEHUB_API_TOKEN']
+# HUGGINGFACEHUB_API_TOKEN = st.secrets['HUGGINGFACEHUB_API_TOKEN']
 
 # Defining the LLM prompt template which contains the instructions also the context is passed in this template itself
 prompt_template = """
